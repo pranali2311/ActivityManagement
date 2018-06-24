@@ -1,0 +1,26 @@
+extends layout
+
+
+block content
+    br
+    h1 Workshop Details
+    form(method='POST' action='/workshops/upload' enctype='multipart/form-data')
+        #form-group1
+            label Name of Workshop
+            input.form-control(name='wname' type='text')
+        #form-group2
+            label Starting Date
+            input.form-control(name='sdate' type='text')
+        #form-group3
+            label Conclusion Date
+            input.form-control(name='cdate' type='text')
+        #form-group4
+            label Team Members
+            input.form-control(name='team' type='text')
+        #form-group5
+            label Details
+            textarea.form-control(name='body')
+        #form-group6
+            label file:
+            input.form-control(name='file',type='file')
+        input.btn.btn-primary(type='submit' value='Submit')

@@ -1,0 +1,28 @@
+extends layout
+
+
+block content
+    br
+    br
+    h1 Registration Form
+    form(method='POST' action='/users/register')
+        #form-group1
+            label Name
+            input.form-control(name='name' type='text')
+        #form-group2
+            label Email
+            input.form-control(name='email' type='text')
+        #form-group3
+            label Department
+            input.form-control(name='dept' type='text')
+        #form-group4
+            label Username
+            input.form-control(name='username' type='text')
+        #form-group5
+            label Password
+            input.form-control(name='password' type='password')
+        #form-group6
+            label Confirm Password
+            input.form-control(name='password2' type='password')
+        br
+        input.btn.btn-primary(type='submit' value='Submit')

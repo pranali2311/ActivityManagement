@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    br
+    br
+    h1 Workshops
+    ul.list-group
+        each workshop,i in workshops
+            li.list-group-item
+                a(href="/workshops/"+workshop._id)= workshop.wname
+

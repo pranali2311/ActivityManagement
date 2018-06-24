@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    br
+    br
+    h1 #{workshop.wname}
+    h5 Worshop Dates: #{workshop.sdate} - #{workshop.cdate}
+    h5 Team Members #{workshop.team}
+    p= workshop.body
+    h5 File #{workshop.file}
+    hr
+    if user
+        a.btn.btn-default(href='/workshops/edit/'+workshop._id) Edit  <!--href tells where it will go on clicking the button-->
+        a.btn.btn-danger.delete-article(href='#', data-id=workshop._id) Delete
+
